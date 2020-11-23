@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: octopusdeploy
+spec:
+  selector:
+    matchLabels:
+      app: octopusdeploy
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: octopusdeploy
+    spec:
+      containers:
+      - name: sqlserver
+        image: mcr.microsoft.com/mssql/server
+        ports:
+        - containerPort: 1433
+        env:
+        - name: SA_PASSWORD
+          value: "P@ssw0rd!"
+        - name: ACCEPT_EULA
+          value: "Y"
+
+      - name: octopusdeploy
+        image: octopusdeploy/octopusdeploy:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ACCEPT_EULA
+          value: "Y"
+        - name: ADMIN_USERNAME
+          value: "admin"
+        - name: ADMIN_PASSWORD
+          value: "SecreTP@assw0rd"
+        - name: DB_CONNECTION_STRING
+          value: "Server=tcp:octopusdb.c1ufrgizkeyf.us-east-1.rds.amazonaws.com,1433;Database=octopusdb;User Id=mike;Password=U+7<Dt3r]~auS!4X;"
