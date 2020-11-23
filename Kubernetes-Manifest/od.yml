@@ -35,4 +35,4 @@ spec:
         - name: ADMIN_PASSWORD
           value: "SecreTP@assw0rd"
         - name: DB_CONNECTION_STRING
-          value: "Server=tcp:octopusdb.c1ufrgizkeyf.us-east-1.rds.amazonaws.com,1433;Database=octopusdb;User Id=mike;Password=U+7<Dt3r]~auS!4X;"
+          value: "Server=tcp:octopusdb-rds-instance.c1ufrgizkeyf.us-east-1.rds.amazonaws.com,1433;Database=octopusdb;User Id=mike;Password=SecreTP@assw0rd"
