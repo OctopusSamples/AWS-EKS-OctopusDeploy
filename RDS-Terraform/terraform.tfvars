@@ -1,0 +1,5 @@
+region = "us-east-1"
+dbName = "odtest92"
+dbUsername = "mike"
+dbPassword = "U+7<Dt3r]~auS!4X"
+subnetGroup = "default-vpc-0e6cca417d641e0fd"
