@@ -24,6 +24,8 @@ spec:
           value: "OD_Password"
         - name: DB_CONNECTION_STRING
           value: "Server=tcp:your_rds_database.your_region.rds.amazonaws.com,1433;Database=database_name;User Id=mike;Password=your_db_password;"
+        - name: MASTER_KEY
+          value: "database_master_key"
         ports:
         - containerPort: 8080
         volumeMounts:
