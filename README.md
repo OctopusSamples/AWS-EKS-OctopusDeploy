@@ -1,5 +1,7 @@
 # AWS-EKS-OctopusDeploy
 
+__⚠️ For official docs on hosting Octopus in Kubernetes, please see [this guide in our documentation](https://octopus.com/docs/installation/octopus-server-linux-container/octopus-in-kubernetes) ⚠️__
+
 This repository contains a code base that you can use to create an EKS cluster and run Octopus Deploy as a deployment in EKS.
 
 ## Prerequisites
